@@ -26,6 +26,9 @@ jobs:
              #Step 4 Run Tests cases
             - name: Run Tests
               run: npm test
+             #Build React app
+            - name: Build React App
+              run: npm run build  
 
 
             
