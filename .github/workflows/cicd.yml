@@ -22,7 +22,7 @@ jobs:
               uses: actions/setup-node@v2
              #Step 3 Install dependencies
             - name: Install dependencies
-              run: npm Install
+              run: npm install
              #Step 4 Run Tests cases
             - name: Run Tests
               run: npm test
