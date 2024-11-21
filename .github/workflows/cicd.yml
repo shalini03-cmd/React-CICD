@@ -1,0 +1,31 @@
+name: React CI/CD
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+        branches:
+            - main        
+
+jobs:  
+    build-and-test:
+        runs-on: ubuntu-latest
+
+        steps:
+            #Step 1 checkout repository
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+             #Step 2 Setup a NodeJS Environment
+            - name: Setup a Node JS
+              uses: actions/setup-node@v2
+             #Step 3 Install dependencies
+            - name: Install dependencies
+              run: npm Install
+             #Step 4 Run Tests cases
+            - name: Run Tests
+              run: npm test
+
+
+            
